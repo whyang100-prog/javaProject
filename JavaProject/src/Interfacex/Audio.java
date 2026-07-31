@@ -1,0 +1,32 @@
+package Interfacex;
+
+public class Audio implements IRemoteControl {
+	private int volume;
+	private boolean mute;
+	@Override
+	public void turnOn() {
+          System.out.println("Audio를 켭니다");		
+	}
+	@Override
+	public void turnOff() {
+        System.out.println("Audio를 끕니다");		
+		
+	}
+	@Override
+	public void setVolume(int volume) {
+		//볼륨조절:최대치/최소치 비교해서 범위 내에서 공용 설정
+		if(volume>IRemoteControl.MAX_VOLUME) {
+			this.volume=IRemoteControl.MAX_VOLUME;
+		}else if(volume<IRemoteControl.MIN_VOLUME) {
+			this.volume=IRemoteControl.MIN_VOLUME;
+		}else {
+			this.volume = volume;
+		}
+		System.out.println("현재 Audio 볼륨"+this.volume);
+		
+	}
+ 
+	//default 메소드 재정의 가능(선택)
+	//재정의하는 경우 default 키워드는 쓰지 않음
+	
+}
