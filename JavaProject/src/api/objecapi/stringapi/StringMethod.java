@@ -20,6 +20,13 @@ public class StringMethod {
 	    System.out.println(subject.indexOf("프로그래밍"));//index3반환
 	    System.out.println(subject.indexOf("프로그램"));
 
+	    //token :분리된 문자열 단위,특정 구분자로 분리되는 문자열의 구성요소
+	    //token :의미론적으로 분리할 수 없는 최소 단위 "선생님께서 부르셨어요"
+	    
+	    //문자열 결합 연산자 :+
+	    //String 내부의 문자열 수정불가능 함,+연산자로 결합 후 새로운 문자열 리턴
+	    System.out.println("ABC"+"DEF");
+
 	    
 	}
 	
